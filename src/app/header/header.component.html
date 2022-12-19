@@ -1,0 +1,40 @@
+<head>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+</head>
+<header>
+    <div class="appname">
+        <svg>
+            <circle r="5" cx="10" cy="50" fill="blue"></circle>
+            <circle r="5" cx="50" cy="5" fill="green"></circle>
+            <circle r="5" cx="50" cy="50" fill="red"></circle>
+            <circle r="5" cx="100" cy="5" fill="violet"></circle>
+            <path d="M 10 50 L 50 5 L 50 50 L 100 5" stroke="lightgreen" stroke-width="2" fill="none"></path>
+        </svg>
+        <h1>Graph</h1>
+        <button (click)="onClickClearGrid()" class="gridclearbutton">Clear Grid</button>
+    </div>
+
+    <nav>
+        <ul class="algoOptions">
+            <li class="dropbox"><input type="checkbox" #check>
+                <a (click)="onClickDropBox()">{{algorithmSelected}}<span class="logo">&#9660;</span></a>
+                <ul class="algo" #algo>
+                    <li class="op" (click)="optionSelected('Dijkstra\'s Algorithm')">Dijkstra's Algorithm</li>
+                    <li class="op" (click)="optionSelected('Breadth First Search')">Breadth First Search</li>
+                    <li class="op" (click)="optionSelected('A* Algorithm')">A* Algorithm</li>
+                    <li class="op" (click)="optionSelected('Depth First Search')">Depth First Search</li>
+                </ul>
+            </li>
+            <li class="visbutton"><button class="algobutton" (click)="runAlgo()">Visualize</button></li>
+        </ul>
+    </nav>
+
+    <div class="details">
+        <div class="content"><label for="" class="imagePos">Start Node</label> <img src="assets/startnode2.jpg"
+                    alt="Start Node"></div>
+        <div class="content"><label for="" class="imagePos">End Node</label><img src="assets/endnode2.jpg" alt="End Node">
+        </div>
+    </div>
+</header>

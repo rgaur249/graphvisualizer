@@ -1,0 +1,73 @@
+.flexContainer {
+    display: grid;
+    grid: repeat(27, 25px) / repeat(60, 25px);
+    height: 80vh;
+    width: 87.9vw;
+    margin: auto;
+    background-color: #fff;
+    border-top:1px solid rgb(196, 220, 230);
+    border-right: 1px solid rgb(196, 220, 230);
+}
+.items {
+   border-color: rgba(0, 0, 255, 0.1);
+   border-width: thin;
+   background-size: contain;
+   border-left:1px solid rgb(196, 220, 230);
+   border-bottom:1px solid rgb(196, 220, 230);
+}
+
+.animation {
+    animation-name: backanimate;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes backanimate {
+    0% {
+        background-color: hsl(181, 83%, 56%);
+        border-radius: 100%;
+        transform: scale(0.1);
+        background-clip: content-box;
+    }
+    10% {
+        background-color: #31ecdd;
+        transform: scale(0.2);
+        border-radius: 70%;
+    }
+
+    20% {
+        background-color: #31ec7f;
+        transform: scale(0.5);
+        border-radius: 60%;
+    }
+    30% {
+        background-color: #d8ec31;
+        transform: scale(0.8);
+        border-radius: 50%;
+    }
+    40% {
+        background-color: #31ec40;
+        transform: scale(1);
+        border-radius: 40%;
+    }
+    50% {
+        background-color: #7aec31;
+        border-radius: 30%;
+    }
+    80% {
+        background-color: #31ec63;
+        border-radius: 20%;
+    }
+    100% {
+        background-color: #31ec59;
+        border-radius: 0%;
+    }
+}
+
+
+
+.blackWall {
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}

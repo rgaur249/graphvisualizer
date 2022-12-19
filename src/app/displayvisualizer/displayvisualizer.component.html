@@ -1,0 +1,8 @@
+<span class="flexContainer">
+    <div highlight [index]=i [cell]=nodesArray *ngFor="let nodesArray of items; let i=index" class="items"
+        [ngStyle]="{border:nodesArray.border,backgroundColor:nodesArray.color,backgroundImage: nodesArray.img}"
+        [ngClass]="{animation: nodesArray.color =='blue'|| nodesArray.color =='gray',
+         blackWall:nodesArray.color == 'black'}">
+    </div>
+
+</span>
